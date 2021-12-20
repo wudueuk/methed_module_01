@@ -21,3 +21,19 @@
 
 	console.log(`Общая сумма товаров ${productCount * productCost}`);
 }
+
+{
+	const productName = prompt('Введите наименование товара');
+	console.log('productName: ', typeof (productName));
+
+	const productCount = +prompt('Введите количество товара');
+	console.log('productCount: ', typeof (productCount));
+
+	const productCategory = prompt('Введите категорию товара');
+	console.log('productCategory: ', typeof (productCategory));
+
+	const productPrice = +prompt('Введите цену товара');
+	console.log('productPrice: ', typeof (productPrice));
+
+	console.log(`На складе ${productCount} единицы товара "${productName}" на сумму ${productCount * productPrice} деревянных`);
+}
