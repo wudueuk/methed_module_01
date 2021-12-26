@@ -9,8 +9,13 @@
  */
 
 const getMinNum = (a, b) => {
-	const c = a - b;
-	return Math.sqrt(c) ? b : a;
+	const aa = Math.sqrt(b - a);
+	const resultA = aa && a;
+
+	const bb = Math.sqrt(a - b);
+	const resultB = bb && b;
+
+	return resultA || resultB;
 };
 
 const numOne = +prompt('Введите первое число');
