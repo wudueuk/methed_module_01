@@ -1,24 +1,8 @@
 'use strict';
 
-/**
- * Первая задача:
-
-Напишите функцию конвертер, которая на вход принимает стоимость покупки в евро и выводит результат в рублях
-
-1 евро = 1.2 доллара,
-
-1 доллар = 73 рубля.
- */
-
-const getCostRub = costEuro => {
-	const dollarRate = 73;
-	const euroRate = dollarRate * 1.2;
-
-	const costRub = costEuro * euroRate;
-
-	return costRub;
-};
-
-const costEuro = +prompt('Введите цену товара');
-
-console.log('Цена товара в рублях - ' + getCostRub(costEuro));
+for (let a = 1; a <= 10; a++) {
+	console.log('---------------------');
+	for (let m = 1; m <= 10; m++) {
+		console.log(`${a}**${m} = ${a ** m}`);
+	}
+}

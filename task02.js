@@ -1,25 +1,28 @@
 'use strict';
 
 /**
- * Напишите функцию, которая принимает строку и возвращает модифицированную строку
-Строка начинается с большой буквы, остальные буквы маленькие
+ * Напишите функцию isPrime.
 
+Она принимает число и возвращает true, если число является простым, а в ином случае false.
 
+Простое число - целое положительное число, имеющее ровно два различных натуральных делителя - единицу и самого себя.
 
-Пример:  "привет Мир" => "Привет мир"
+Например, 5 - простое число, так как делится без остатка только на 1 и на себя.
+
+151, 911, 1987 - так же простые числа
+
+Используйте цикл for в функции
  */
 
-const getModifyString = str => {
-	let modifyStr = str.toLowerCase();
-
-	const firstLetter = modifyStr[0].toUpperCase();
-	const otherStr = modifyStr.substring(1, modifyStr.length);
-
-	modifyStr = firstLetter + otherStr;
-
-	return modifyStr;
+const isPrime = (num) => {
+	for (let i = 2; i <= Math.floor(num / 2); i++) {
+		if ((num % i) === 0) {
+			return false;
+		}
+	}
+	return true;
 };
 
-const myStr = prompt('Введите текст');
+let numInput = +prompt('Введите число');
 
-console.log(getModifyString(myStr));
+console.log(isPrime(numInput));
