@@ -77,7 +77,7 @@ const game = (rand, min, max) => {
 	if (checkResult === 0) {
 		return game(rand, min, max);
 	} else {
-		alert('Пока!'); // Пользователь угадал число
+		alert('Ура, вы победили!'); // Пользователь угадал число
 		return;
 	}
 }
