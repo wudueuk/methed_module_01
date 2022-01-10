@@ -36,7 +36,8 @@ const cart = {
 	},
 	print() {
 		/** Выводит в консоль JSON строку из массива items и на следующей строке выводит общую стоимость корзины */
-		console.log(JSON.stringify(this));
+		console.log('items[]:', JSON.stringify(this.items));
+		console.log('totalPrice:', this.totalPrice);
 	},
 };
 
