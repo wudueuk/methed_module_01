@@ -42,7 +42,7 @@
       return -1; // Пользователь нажал отмену
     } else {
       inputPlayer = inputPlayer.toLowerCase();
-      //Проверяем правильность ввода
+      // Проверяем правильность ввода
       let coincidence = -1;
       lang.figures.find((element, index) => {
         if (element[0] === inputPlayer[0]) coincidence = index;
@@ -55,15 +55,11 @@
     }
   };
 
-  const checkResult = (computer, player) => {
-    return computer === 2 && player === 0 ||
+  const checkResult = (computer, player) => (computer === 2 && player === 0 ||
       computer === 0 && player === 1 ||
-      computer === 1 && player === 2 ? 'c' : 'p';
-  };
+      computer === 1 && player === 2 ? 'c' : 'p');
 
-  const getExitGame = (lang) => {
-    return confirm(`${lang.messages.exitQuestion}`);
-  };
+  const getExitGame = (lang) => confirm(`${lang.messages.exitQuestion}`);
 
   const game = language => {
     const result = {
